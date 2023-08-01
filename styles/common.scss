@@ -1,0 +1,31 @@
+@mixin setSquare($val) {
+  width: $val;
+  height: $val;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColCen {
+  @extend .flexCenter;
+  @extend .flexCol;
+}
+
+.alignCen {
+  display: flex;
+  align-items: center;
+}
+
+.clearStl {
+  border: none;
+  outline: none;
+  background: none;
+}
