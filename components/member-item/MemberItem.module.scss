@@ -1,0 +1,30 @@
+@import "styles/common";
+
+.memberItem {
+  @extend .flexColCen;
+  cursor: pointer;
+
+  .imgContainer {
+    @extend .flexCenter;
+    @include setSquare(50px);
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .name {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  .role {
+    width: max-content;
+    font-size: 12px;
+    color: #9897ad;
+    font-weight: 500;
+    line-height: 18px;
+  }
+}

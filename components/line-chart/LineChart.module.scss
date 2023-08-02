@@ -1,0 +1,31 @@
+@import "styles/common";
+
+.lineChart {
+  @extend .flexColCen;
+  gap: 1rem;
+  width: 426px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 28px;
+  background: #fff;
+  border: 1px solid #e6e5f2cf;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  .row {
+    @extend .alignCen;
+    justify-content: space-between;
+    width: 100%;
+
+    .left,
+    .right {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1rem;
+    }
+
+    .left {
+      @extend .alignCen;
+      gap: 0.4rem;
+    }
+  }
+}

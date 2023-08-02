@@ -1,0 +1,34 @@
+@import "styles/common";
+
+.toggleBtn {
+  @extend .alignCen;
+  gap: 0.5rem;
+
+  .title {
+    font-weight: 600;
+    font-size: 14px;
+    width: 1.85rem;
+  }
+
+  .container {
+    width: 34px;
+    height: 20px;
+    border-radius: 2rem;
+    box-shadow: #0000003d 0 0px 8px;
+    cursor: pointer;
+
+    .btn {
+      @extend .clearStl;
+      @include setSquare(1rem);
+      margin-top: 1px;
+      margin-left: 1px;
+      border-radius: 50%;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+  }
+
+  .active .btn {
+    margin-left: 17px;
+  }
+}

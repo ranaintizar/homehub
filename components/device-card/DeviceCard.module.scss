@@ -1,0 +1,24 @@
+@import "styles/common";
+
+.deviceCard {
+  @extend .flexCol;
+  gap: 10px;
+  width: 204px;
+  padding: 20px 14px 20px 8px;
+  border-radius: 22px;
+
+  div {
+    @extend .alignCen;
+    justify-content: space-between;
+
+    .icon {
+      @extend .flexCenter;
+      @include setSquare(44px);
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    margin-left: 12px;
+  }
+}
