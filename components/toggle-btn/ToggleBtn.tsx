@@ -7,25 +7,27 @@ interface Props {
   textClr: string;
   bgClr: string;
   btnClr: string;
+  size: "md" | "lg";
   customClass?: string;
-  setIsActive: (arg: any) => void;
+  setIsON: (arg: any) => void;
 }
 
 const ToggleBtn = ({
   textClr,
   bgClr,
   btnClr,
+  size,
   customClass,
-  setIsActive,
+  setIsON,
 }: Props) => {
   const [active, setActive] = React.useState(false);
 
   useEffect(() => {
-    setIsActive(active);
-  }, [active]);
+    setIsON(active);
+  }, [active, setIsON]);
 
   return (
-    <div className={clsx(stl.toggleBtn, customClass)}>
+    <div className={clsx(stl.toggleBtn, stl[size], customClass)}>
       <span
         style={{ color: textClr, fontWeight: "600", fontSize: "14px" }}
         className={stl.title}
@@ -47,6 +49,7 @@ ToggleBtn.defaultProps = {
   textClr: "#242424",
   bgClr: "#f5f5f5",
   btnClr: "#fff",
+  size: "md",
 };
 
 export default ToggleBtn;

@@ -11,8 +11,6 @@ interface Props {
 }
 
 const Button = ({ leftIcon, label, rightIcon, customClass }: Props) => {
-  console.log(leftIcon, label);
-
   return (
     <div className={clsx(stl.btn, customClass)}>
       {leftIcon || label ? (
