@@ -1,6 +1,11 @@
 import Head from "next/head";
 
 import Navbar from "components/navbar";
+import Header from "components/header";
+import Main from "components/main";
+import Sidebar from "components/sidebar";
+
+import stl from "./index.module.scss";
 
 export default function Home() {
   return (
@@ -11,8 +16,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={stl.main}>
         <Navbar />
+        <div className={stl.container}>
+          <Header />
+          <div className={stl.center}>
+            <Main />
+            <Sidebar />
+          </div>
+        </div>
       </main>
     </>
   );

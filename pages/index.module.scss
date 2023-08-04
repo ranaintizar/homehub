@@ -1,0 +1,22 @@
+@import "styles/common";
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  @extend .flexCenter;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+  color: #242424;
+  background: #f9f9f9;
+
+  .container {
+    @extend .flexColCen;
+    gap: 1rem;
+
+    .center {
+      @extend .flexCenter;
+      gap: 2rem;
+    }
+  }
+}

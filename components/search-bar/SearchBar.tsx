@@ -7,7 +7,7 @@ import stl from "./SearchBar.module.scss";
 const SearchBar = () => {
   return (
     <div className={stl.searchbar}>
-      <span>
+      <span className={stl.icon}>
         <SearchIcon />
       </span>
       <input type="search" placeholder="Search" />
