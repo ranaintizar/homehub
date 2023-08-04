@@ -2,12 +2,12 @@
 
 .deviceCard {
   @extend .flexCol;
-  gap: 10px;
-  width: 204px;
+  gap: 5px;
+  width: 12.75rem;
   padding: 20px 14px 20px 8px;
   border-radius: 22px;
 
-  div {
+  .iconContainer {
     @extend .alignCen;
     justify-content: space-between;
 
@@ -20,5 +20,36 @@
   .title {
     font-weight: 600;
     margin-left: 12px;
+  }
+}
+
+.secondary {
+  width: 11rem;
+  border-radius: 25px;
+  border: 1px solid #e6e5f2cf;
+
+  .iconContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    span {
+      order: 1;
+    }
+
+    .toggleBtn {
+      justify-content: space-between;
+      width: 100%;
+      padding-left: 0.7rem;
+
+      div {
+        order: 1;
+        border: 1px solid #f3f1f1;
+
+        button {
+          margin-top: 1.35px;
+        }
+      }
+    }
   }
 }

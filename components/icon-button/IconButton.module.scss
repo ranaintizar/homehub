@@ -1,0 +1,33 @@
+@import "styles/common";
+
+.iconBtn {
+  @extend .flexCenter;
+  @include setSquare(54px);
+  border-radius: 0.75rem;
+  background: #7a40f2;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: #0000003d 0px 0px 10px;
+
+  &:hover {
+    box-shadow: #7a40f2 0px 0px 12px;
+  }
+
+  &:active {
+    background: #6d45be;
+  }
+}
+
+.secondary {
+  background: #f5f5f5;
+  color: #9897ad;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: #0000003d 0px 0px 10px;
+  }
+
+  &:active {
+    background: #00000012;
+  }
+}

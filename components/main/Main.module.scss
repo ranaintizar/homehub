@@ -1,0 +1,47 @@
+@import "styles/common";
+
+.main {
+  @extend .flexCol;
+  gap: 1rem;
+  width: 750px;
+
+  .controls {
+    @extend .flexCol;
+    gap: 1rem;
+
+    .header {
+      @extend .alignCen;
+      justify-content: space-between;
+
+      .left {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 1.026px;
+      }
+
+      .right {
+        @extend .alignCen;
+        gap: 1.5rem;
+
+        .text {
+          @extend .alignCen;
+          gap: 0.5rem;
+          text-align: center;
+          font-size: 15.085px;
+          font-weight: 700;
+          line-height: 18px;
+        }
+
+        .btn {
+          gap: 3.5rem;
+        }
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

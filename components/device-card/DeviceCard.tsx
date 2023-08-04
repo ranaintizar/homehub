@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 
 import ToggleBtn from "components/toggle-btn";
 
@@ -15,6 +16,9 @@ interface Props {
   toggleBtnTextClr: string;
   toggleBtnBgClr: string;
   toggleBtnClr: string;
+  variant: "primary" | "secondary";
+  isActive: Boolean;
+  handleOnClick: (arg: string) => void;
 }
 
 const DeviceCard = ({
@@ -26,31 +30,75 @@ const DeviceCard = ({
   toggleBtnTextClr,
   toggleBtnBgClr,
   toggleBtnClr,
+  variant,
+  isActive,
+  handleOnClick,
 }: Props) => {
-  const [isActive, setIsActive] = React.useState(false);
+  const [isON, setIsON] = React.useState(false);
   const [shadow, setShadow] = React.useState("");
-
-  console.log(isActive);
 
   return (
     <div
       onMouseEnter={() => setShadow(`${bgClr} 0px 1px 10px`)}
       onMouseLeave={() => setShadow("")}
-      style={{ background: bgClr, boxShadow: shadow }}
-      className={stl.deviceCard}
+      style={
+        isActive
+          ? { background: "#7a40ff" }
+          : (variant === "secondary" && { background: "#fff" }) || {
+              background: bgClr,
+              boxShadow: shadow,
+            }
+      }
+      className={clsx(stl.deviceCard, stl[variant])}
+      onClick={() => handleOnClick(title)}
     >
-      <div>
-        <span style={{ color: iconClr }} className={stl.icon}>
+      <div className={stl.iconContainer}>
+        <span
+          style={
+            isActive
+              ? { color: "#ffff" }
+              : (variant === "secondary" &&
+                  (isON ? { color: "#7a40f2" } : { color: "#9897ad" })) || {
+                  color: iconClr,
+                }
+          }
+          className={stl.icon}
+        >
           {icon}
         </span>
         <ToggleBtn
-          textClr={toggleBtnTextClr}
-          bgClr={toggleBtnBgClr}
-          btnClr={toggleBtnClr}
-          setIsActive={setIsActive}
+          textClr={
+            isActive
+              ? "#fff"
+              : (variant === "secondary" && "#242424") || toggleBtnTextClr
+          }
+          bgClr={
+            isActive
+              ? "#fff"
+              : variant === "secondary" && isON
+              ? "#7a40f2"
+              : "#f5f5f5" || toggleBtnBgClr
+          }
+          btnClr={
+            isActive
+              ? "#6f5cea"
+              : (variant === "secondary" && "#fff") || toggleBtnClr
+          }
+          setIsON={setIsON}
+          customClass={stl.toggleBtn}
         />
       </div>
-      <span style={{ color: titleClr }} className={stl.title}>
+      <span
+        style={
+          isActive
+            ? { color: "#fff" }
+            : (variant === "secondary" &&
+                (isON ? { color: "#7a40f2" } : { color: "#9897ad" })) || {
+                color: titleClr,
+              }
+        }
+        className={stl.title}
+      >
         {title}
       </span>
     </div>
@@ -66,6 +114,9 @@ DeviceCard.defaultProps = {
   toggleBtnTextClr: "#fff",
   toggleBtnBgClr: "#fff",
   toggleBtnClr: "#6f5cea",
+  variant: "primary",
+  isActive: false,
+  handleOnClick: (title: string) => console.log(title),
 };
 
 export default DeviceCard;
