@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 
 import HomeIcon from "public/home.svg";
 import DashboardIcon from "public/dashboard.svg";
@@ -8,14 +7,12 @@ import SecurityIcon from "public/security.svg";
 import LocationIcon from "public/location.svg";
 import FamilyIcon from "public/persons.svg";
 import CellularIcon from "public/cellular.svg";
-import CollapseIcon from "public/collapse.svg";
-import ExpandIcon from "public/expand.svg";
+import SignOutIcon from "public/sign-out-2.svg";
 
 import stl from "./Navbar.module.scss";
 
 const Navbar = () => {
   const [active, setIsActive] = React.useState("");
-  const [expand, setExpand] = React.useState(false);
 
   const items = [
     { title: "Home", icon: <HomeIcon /> },
@@ -28,7 +25,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={clsx(stl.navbar, expand ? stl.expand : "")}>
+    <div className={stl.navbar}>
       <div>
         {items.map((item, i) => (
           <button
@@ -38,20 +35,13 @@ const Navbar = () => {
           >
             <span></span>
             {item.icon}
-            <span className={stl.title}>{item.title}</span>
             <span></span>
           </button>
         ))}
       </div>
       <div>
-        <button
-          title={expand ? "collapse-sidebar" : "expand-sidebar"}
-          className={active === "signout" ? stl.active : ""}
-          onClick={() => setExpand(!expand)}
-        >
-          <span></span>
-          {expand ? <CollapseIcon /> : <ExpandIcon />}
-          <span></span>
+        <button className={stl.signOutBtn}>
+          <SignOutIcon />
         </button>
       </div>
     </div>
