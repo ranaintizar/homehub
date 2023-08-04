@@ -8,6 +8,7 @@
   border-radius: 28px;
   background: #ffecc8;
   overflow: hidden;
+  animation: animate 1s ease-out;
 
   .left {
     @extend .flexCol;
@@ -69,5 +70,19 @@
     position: absolute;
     right: 0;
     top: 7.2%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-700px);
+  }
+
+  80% {
+    transform: translateY(-700px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

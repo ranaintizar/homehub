@@ -8,6 +8,7 @@
   .controls {
     @extend .flexCol;
     gap: 1rem;
+    animation: animate 1.7s ease-out;
 
     .header {
       @extend .alignCen;
@@ -43,5 +44,27 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0);
+  }
+
+  75% {
+    transform: scale(0);
+  }
+
+  85% {
+    transform: scale(1.05);
+  }
+
+  90% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

@@ -6,6 +6,7 @@
   background: #fff;
   border-radius: 28px;
   border: 1px solid #e6e5f2;
+  animation: animate 0.8s ease-out;
 
   .header {
     @extend .alignCen;
@@ -174,5 +175,19 @@
         }
       }
     }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(700px);
+  }
+
+  70% {
+    transform: translateY(700px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
