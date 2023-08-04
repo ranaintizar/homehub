@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  animation: animate 3s ease-out;
+  animation: animate 2.5s ease-out;
 }
 
 @keyframes animate {
@@ -10,7 +10,7 @@
     opacity: 0;
   }
 
-  60% {
+  70% {
     opacity: 0;
   }
 
