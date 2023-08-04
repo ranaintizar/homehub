@@ -24,6 +24,11 @@
   align-items: center;
 }
 
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .clearStl {
   border: none;
   outline: none;

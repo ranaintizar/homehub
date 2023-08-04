@@ -1,0 +1,22 @@
+@import "styles/common";
+
+.btn {
+  @extend .alignCen;
+  gap: 1rem;
+  width: max-content;
+  padding: 12px 14px;
+  background: #edeef4;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+
+  &:active {
+    background: #00000010;
+  }
+
+  .left {
+    @extend .alignCen;
+    gap: 0.4rem;
+    font-weight: 600;
+  }
+}
