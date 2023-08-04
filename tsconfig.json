@@ -5,6 +5,8 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -15,6 +17,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "components/*": ["./components/*"],
+      "utils/*": ["./utils/*"],
       "@/*": ["./*"]
     }
   },
