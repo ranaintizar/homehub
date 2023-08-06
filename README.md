@@ -1,3 +1,12 @@
+## Preview
+
+<div align="center">
+  
+![image](https://github.com/ranaintizar/homehub/assets/110844434/33278a34-238c-4d8d-8938-7960c0d63126)
+
+</div>
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
