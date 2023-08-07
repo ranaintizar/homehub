@@ -12,7 +12,7 @@ import SignOutIcon from "public/sign-out-2.svg";
 import stl from "./Navbar.module.scss";
 
 const Navbar = () => {
-  const [active, setIsActive] = React.useState("");
+  const [active, setIsActive] = React.useState("Home");
 
   const items = [
     { title: "Home", icon: <HomeIcon /> },
